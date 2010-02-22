@@ -1,0 +1,11 @@
+citHeader("To cite package 'GEVcdn' in publications use:")
+
+citEntry(entry="Article",
+         title        = "A flexible nonlinear modelling framework for nonstationary generalized extreme value analysis in hydroclimatology",
+         author       = "Alex J. Cannon",
+         year         = "2010",
+         journal      = "Hydrological Processes",
+         volume       = "24",
+         pages        = "673--685. DOI: 10.1002/hyp.7506",
+         textVersion  = "Cannon, A.J., 2010. A flexible nonlinear modelling framework for nonstationary generalized extreme value analysis in hydroclimatology. Hydrological Processes, 24: 673-685. DOI: 10.1002/hyp.7506"
+)
