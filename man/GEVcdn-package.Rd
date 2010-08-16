@@ -32,17 +32,7 @@ Note: the GEV distribution functions are provided by the
 the shape parameter is opposite to that used in hydrology and thus differs
 from Cannon (2010).
 }
-\details{
-\tabular{ll}{
-Package: \tab GEVcdn\cr
-Type: \tab Package\cr
-Version: \tab 1.0.1\cr
-Date: \tab 2010-07-30\cr
-License: \tab GPL-2\cr
-LazyLoad: \tab yes\cr
-}
 
-}
 \author{
 Alex J. Cannon
 

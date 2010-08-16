@@ -157,14 +157,12 @@ models[[2]] <- list(Th = gevcdn.identity)
 models[[3]] <- list(n.hidden = 1, Th = gevcdn.logistic)
 # Nonlinear, 2 hidden nodes
 models[[4]] <- list(n.hidden = 2, Th = gevcdn.logistic)
-# Nonlinear, 3 hidden nodes
-models[[4]] <- list(n.hidden = 3, Th = gevcdn.logistic)
 
 ## Fit models
 
 weights.models <- list()
 for(i in seq_along(models)){
-    weights.models[[i]] <- gevcdn.fit(x = x, y = y, n.trials = 5,
+    weights.models[[i]] <- gevcdn.fit(x = x, y = y, n.trials = 3,
                                       n.hidden = models[[i]]$n.hidden,
                                       Th = models[[i]]$Th,
                                       fixed = models[[i]]$fixed)

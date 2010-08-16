@@ -147,8 +147,8 @@ q <- sapply(c(0.1, 0.5, 0.9), qgev, location = loc, scale = scl,
 ## Fit ensemble of models with early stopping turned on
 
 weights.on <- gevcdn.bag(x = x, y = y, iter.max = 100,
-                         iter.step = 10, n.bootstrap = 20,
-                         n.hidden = 3)
+                         iter.step = 10, n.bootstrap = 10,
+                         n.hidden = 2)
 
 parms.on <- lapply(weights.on, gevcdn.evaluate, x = x)
 

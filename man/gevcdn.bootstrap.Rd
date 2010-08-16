@@ -124,10 +124,10 @@ set.seed(100)
 y <- as.matrix(rgev(length(x), location = loc, scale = scl,
                shape = shp))
 
-## Fit 100 bootstrapped models
+## Fit 30 bootstrapped models
 
-CI <- gevcdn.bootstrap(n.bootstrap = 100, x = x, y = y,
-                       iter.max = 200, n.hidden = 2,
+CI <- gevcdn.bootstrap(n.bootstrap = 30, x = x, y = y,
+                       iter.max = 100, n.hidden = 2,
                        Th = gevcdn.logistic, n.trials = 1,
                        boot.method = "residual",
                        probs = c(0.1, 0.5, 0.9))

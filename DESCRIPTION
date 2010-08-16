@@ -1,8 +1,8 @@
 Package: GEVcdn
 Type: Package
 Title: GEV conditonal density estimation network
-Version: 1.0.1
-Date: 2010-02-22
+Version: 1.0.2
+Date: 2010-08-16
 Author: Alex J. Cannon
 Maintainer: Alex J. Cannon <alex.cannon@ec.gc.ca>
 Description: A flexible nonlinear modelling framework for nonstationary
@@ -11,6 +11,6 @@ License: GPL-2
 Depends: VGAM
 Suggests: boot
 LazyLoad: yes
-Packaged: 2010-07-30 16:16:10 UTC; acannon
+Packaged: 2010-08-16 17:52:45 UTC; acannon
 Repository: CRAN
-Date/Publication: 2010-07-30 20:06:51
+Date/Publication: 2010-08-16 18:42:45
