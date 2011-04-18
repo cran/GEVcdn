@@ -42,6 +42,11 @@ Maintainer: Alex J. Cannon <alex.cannon@ec.gc.ca>
 Cannon, A.J., 2010. A flexible nonlinear modelling framework for
 nonstationary generalized extreme value analysis in hydroclimatology.
 Hydrological Processes, 24: 673-685. DOI: 10.1002/hyp.7506
+
+Cannon, A.J., 2011. GEVcdn: an R package for nonstationary extreme
+value analysis by generalized extreme value conditional density
+estimation network, Computers & Geosciences,
+DOI: 10.1016/j.cageo.2011.03.005
 }
 
 \keyword{ package }
