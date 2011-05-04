@@ -36,7 +36,7 @@ from Cannon (2010).
 \author{
 Alex J. Cannon
 
-Maintainer: Alex J. Cannon <alex.cannon@ec.gc.ca>
+Maintainer: Alex J. Cannon <acannon@eos.ubc.ca>
 }
 \references{
 Cannon, A.J., 2010. A flexible nonlinear modelling framework for
