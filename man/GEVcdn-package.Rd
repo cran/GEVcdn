@@ -45,7 +45,7 @@ Hydrological Processes, 24: 673-685. DOI: 10.1002/hyp.7506
 
 Cannon, A.J., 2011. GEVcdn: an R package for nonstationary extreme
 value analysis by generalized extreme value conditional density
-estimation network, Computers & Geosciences,
+estimation network, Computers & Geosciences, 37: 1532-1533.
 DOI: 10.1016/j.cageo.2011.03.005
 }
 
