@@ -1,5 +1,5 @@
-33677368bab3b585e9b6c977988ac347 *DESCRIPTION
-2b475b7e6f1bb13c8c182185560958bc *NAMESPACE
+fd6c9e586233ad2ab5fa85eacbbd9db8 *DESCRIPTION
+dbe69f5c1080434a00cbf10e055e1ed9 *NAMESPACE
 c99facdcdcb1fdd0e19a7a689c9592a4 *R/gevcdn.bag.R
 ff93fa88d0a4f452a441757e05cd8511 *R/gevcdn.bootstrap.R
 142409bb224ce769c202d1945ede3633 *R/gevcdn.cost.R
@@ -10,7 +10,7 @@ aee445cc26840f62b781f714dd45c59d *R/gevcdn.identity.R
 4eee4517ed64000afeecb1de95e8ee88 *R/gevcdn.logistic.R
 71489ed9e22c0aea3fd0e31f18b96c51 *R/gevcdn.reshape.R
 56aa6017a3f46ce9e9c1b43175540d14 *inst/CITATION
-2dff56725ea74f536fa6174189ade895 *man/GEVcdn-package.Rd
+4d0616b74433ebb2163e51b675fccac7 *man/GEVcdn-package.Rd
 6725acf9edbd7d63f921d55333c3902e *man/gevcdn.bag.Rd
 ae319aaf1c13366f5b9800e42fa46043 *man/gevcdn.bootstrap.Rd
 40b0d53bdaf13b94a6e2455a575911e3 *man/gevcdn.cost.Rd

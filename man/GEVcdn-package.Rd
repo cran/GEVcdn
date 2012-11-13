@@ -3,7 +3,7 @@
 \alias{GEVcdn}
 \docType{package}
 \title{
-GEV conditional density estimation network
+GEV Conditional Density Estimation Network
 }
 \description{
 Parameters in a Generalized Extreme Value (GEV) distribution are specified as a
