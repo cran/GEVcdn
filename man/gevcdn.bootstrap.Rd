@@ -124,29 +124,30 @@ set.seed(100)
 y <- as.matrix(rgev(length(x), location = loc, scale = scl,
                shape = shp))
 
+# Not run:
 ## Fit 30 bootstrapped models
-
-CI <- gevcdn.bootstrap(n.bootstrap = 30, x = x, y = y,
-                       iter.max = 100, n.hidden = 2,
-                       Th = gevcdn.logistic, n.trials = 1,
-                       boot.method = "residual",
-                       probs = c(0.1, 0.5, 0.9))
-
+#
+# CI <- gevcdn.bootstrap(n.bootstrap = 30, x = x, y = y,
+#                       iter.max = 100, n.hidden = 2,
+#                       Th = gevcdn.logistic, n.trials = 1,
+#                       boot.method = "residual",
+#                       probs = c(0.1, 0.5, 0.9))
+#
 ## Plot data and percentile confidence intervals for GEV parameters
-
-par(mfrow = c(2, 2))
-matplot(x, y, type = "b", pch = 19, col = "red", xlab = "x",
-        ylab = "y", main = "gevcdn.bootstrap")
-matplot(x, cbind(loc, t(apply(CI$location.bootstrap, 1, quantile,
-        p = c(0.025, 0.975)))), type = c("l", "b", "b"), pch = 20,
-        lwd = 3, col = c("black", rep("green", 2)), xlab = "x",
-        ylab = "location", main = "location CI")
-matplot(x, cbind(scl, t(apply(CI$scale.bootstrap, 1, quantile,
-        p = c(0.025, 0.975)))), type = c("l", "b", "b"), pch = 20,
-        lwd = 3, col = c("black", rep("orange", 2)), xlab = "x",
-        ylab = "scale", main = "scale CI")
-matplot(x, cbind(shp, t(apply(CI$shape.bootstrap, 1, quantile,
-        p = c(0.025, 0.975)))), type = c("l", "b", "b"), pch = 20,
-        lwd = 3, col = c("black", rep("brown", 2)), xlab = "x",
-        ylab = "shape", main = "shape CI")
+#
+# par(mfrow = c(2, 2))
+# matplot(x, y, type = "b", pch = 19, col = "red", xlab = "x",
+#        ylab = "y", main = "gevcdn.bootstrap")
+# matplot(x, cbind(loc, t(apply(CI$location.bootstrap, 1, quantile,
+#         p = c(0.025, 0.975)))), type = c("l", "b", "b"), pch = 20,
+#         lwd = 3, col = c("black", rep("green", 2)), xlab = "x",
+#         ylab = "location", main = "location CI")
+# matplot(x, cbind(scl, t(apply(CI$scale.bootstrap, 1, quantile,
+#         p = c(0.025, 0.975)))), type = c("l", "b", "b"), pch = 20,
+#         lwd = 3, col = c("black", rep("orange", 2)), xlab = "x",
+#         ylab = "scale", main = "scale CI")
+# matplot(x, cbind(shp, t(apply(CI$shape.bootstrap, 1, quantile,
+#         p = c(0.025, 0.975)))), type = c("l", "b", "b"), pch = 20,
+#         lwd = 3, col = c("black", rep("brown", 2)), xlab = "x",
+#         ylab = "shape", main = "shape CI")
 }

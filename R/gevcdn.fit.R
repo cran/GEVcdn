@@ -73,11 +73,9 @@ function (x, y, iter.max = 1000, n.hidden = 2, Th = gevcdn.logistic,
             k <- 3
         } else{
             if (identical(Th, gevcdn.identity)){
-                k <- 3 * (ncol(x) + 1)
-                if (!is.null(fixed)) k <- k - length(fixed)
+                k <- (3-length(fixed)) * (ncol(x) + 1) + length(fixed)
             } else{
-                k <- length(weights)
-                if (!is.null(fixed)) k <- k - n.hidden * length(fixed)
+                k <- length(weights) - n.hidden * length(fixed)
             }
         }
         n <- nrow(y)

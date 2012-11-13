@@ -144,39 +144,40 @@ y <- as.matrix(rgev(length(x), location = loc, scale = scl,
 q <- sapply(c(0.1, 0.5, 0.9), qgev, location = loc, scale = scl,
             shape = shp)
 
+## Not run:
 ## Fit ensemble of models with early stopping turned on
-
-weights.on <- gevcdn.bag(x = x, y = y, iter.max = 100,
-                         iter.step = 10, n.bootstrap = 10,
-                         n.hidden = 2)
-
-parms.on <- lapply(weights.on, gevcdn.evaluate, x = x)
-
+#
+# weights.on <- gevcdn.bag(x = x, y = y, iter.max = 100,
+#                         iter.step = 10, n.bootstrap = 10,
+#                         n.hidden = 2)
+#
+# parms.on <- lapply(weights.on, gevcdn.evaluate, x = x)
+#
 ## 10th, 50th, and 90th percentiles
-
-q.10.on <- q.50.on <- q.90.on <- c()
-for(i in seq_along(parms.on)){
-    q.10.on <- cbind(q.10.on, qgev(p = 0.1,
-                     location = parms.on[[i]][,"location"],
-                     scale = parms.on[[i]][,"scale"],
-                     shape = parms.on[[i]][,"shape"]))
-    q.50.on <- cbind(q.50.on, qgev(p = 0.5,
-                     location = parms.on[[i]][,"location"],
-                     scale = parms.on[[i]][,"scale"],
-                     shape = parms.on[[i]][,"shape"]))
-    q.90.on <- cbind(q.90.on, qgev(p = 0.9,
-                     location = parms.on[[i]][,"location"],
-                     scale = parms.on[[i]][,"scale"],
-                     shape = parms.on[[i]][,"shape"]))
-}
-
+#
+# q.10.on <- q.50.on <- q.90.on <- c()
+# for(i in seq_along(parms.on)){
+#     q.10.on <- cbind(q.10.on, qgev(p = 0.1,
+#                      location = parms.on[[i]][,"location"],
+#                      scale = parms.on[[i]][,"scale"],
+#                      shape = parms.on[[i]][,"shape"]))
+#     q.50.on <- cbind(q.50.on, qgev(p = 0.5,
+#                      location = parms.on[[i]][,"location"],
+#                      scale = parms.on[[i]][,"scale"],
+#                      shape = parms.on[[i]][,"shape"]))
+#     q.90.on <- cbind(q.90.on, qgev(p = 0.9,
+#                      location = parms.on[[i]][,"location"],
+#                      scale = parms.on[[i]][,"scale"],
+#                      shape = parms.on[[i]][,"shape"]))
+# }
+#
 ## Plot data and quantiles
-
-matplot(cbind(y, q, rowMeans(q.10.on), rowMeans(q.50.on),
-        rowMeans(q.90.on)), type = c("b", rep("l", 6)),
-        lty = c(1, rep(c(1, 2, 1), 2)),
-        lwd = c(1, rep(c(3, 2, 3), 2)),
-        col = c("red", rep("orange", 3), rep("blue", 3)),
-        pch = 19, xlab = "x", ylab = "y",
-        main = "gevcdn.bag (early stopping on)")
+#
+# matplot(cbind(y, q, rowMeans(q.10.on), rowMeans(q.50.on),
+#         rowMeans(q.90.on)), type = c("b", rep("l", 6)),
+#         lty = c(1, rep(c(1, 2, 1), 2)),
+#         lwd = c(1, rep(c(3, 2, 3), 2)),
+#         col = c("red", rep("orange", 3), rep("blue", 3)),
+#         pch = 19, xlab = "x", ylab = "y",
+#         main = "gevcdn.bag (early stopping on)")
 }

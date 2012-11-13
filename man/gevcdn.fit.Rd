@@ -162,7 +162,7 @@ models[[4]] <- list(n.hidden = 2, Th = gevcdn.logistic)
 
 weights.models <- list()
 for(i in seq_along(models)){
-    weights.models[[i]] <- gevcdn.fit(x = x, y = y, n.trials = 3,
+    weights.models[[i]] <- gevcdn.fit(x = x, y = y, n.trials = 1,
                                       n.hidden = models[[i]]$n.hidden,
                                       Th = models[[i]]$Th,
                                       fixed = models[[i]]$fixed)
