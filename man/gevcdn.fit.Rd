@@ -18,9 +18,13 @@ number of hidden nodes \code{n.hidden} controls the overall complexity of the
 model. GEV parameters can be held constant (i.e., stationary) via the
 \code{fixed} argument. The form of the shifted beta distribution prior for the
 GEV shape parameter is controlled by the \code{beta.p} and \code{beta.q}
-arguments. Weight penalty regularization for the magnitude of the input-hidden
-layer weights can be applied by setting \code{sd.norm} to a value less than
-\code{Inf}.
+arguments. By default, these are set to values used in Cannon (2010).
+Other alternatives include values recommended by Martins and Stedinger (2000)
+(\code{beta.p = 9} and \code{beta.q = 6}) or values following from
+the normal distribution reported by Papalexiou and Koutsoyiannis (2013)
+(\code{beta.p = 71.1} and \code{beta.q = 44.7}). Weight penalty
+regularization for the magnitude of the input-hidden layer weights can
+be applied by setting \code{sd.norm} to a value less than \code{Inf}.
 
 Values of the Akaike information criterion (AIC), Akaike information criterion
 with small sample size correction (AICc), and Bayesian information criterion
@@ -122,6 +126,10 @@ Hydrological Processes, 24: 673-685. DOI: 10.1002/hyp.7506
 Martins, E.S. and J.R. Stedinger, 2000. Generalized maximum-likelihood
 generalized extreme-value quantile estimators for hydrologic data. Water
 Resources Research, 36:737-744. DOI: 10.1029/1999WR900330
+
+Papalexiou, S.M. and Koutsoyiannis, D., 2013. Battle of extreme value
+distributions: A global survey on extreme daily rainfall. Water
+Resources Research, 49(1), 187-201. DOI: 10.1029/2012WR012557
 
 }
 
