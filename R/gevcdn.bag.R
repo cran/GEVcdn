@@ -16,7 +16,7 @@ function (x, y, iter.max = 1000, iter.step = 10, n.bootstrap = 30,
     y.min <- min(y)
     y.max <- max(y)
     y <- (y - y.min)/(y.max - y.min)
-    w.bootstrap <- list()
+    w.bootstrap <- vector("list", n.bootstrap)
     for (i in seq_len(n.bootstrap)){
         cat("*** Bootstrap sample", i, "\n")
         cases.in <- sample(nrow(x), replace=TRUE)

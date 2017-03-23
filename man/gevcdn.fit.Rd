@@ -155,7 +155,7 @@ q <- sapply(c(0.1, 0.5, 0.9), qgev, location = loc, scale = scl,
 
 ## Define a hierarchy of models of increasing complexity
 
-models <- list()
+models <- vector("list", 4)
 # Stationary model
 models[[1]] <- list(Th = gevcdn.identity,
                     fixed = c("location", "scale", "shape"))
@@ -168,7 +168,7 @@ models[[4]] <- list(n.hidden = 2, Th = gevcdn.logistic)
 
 ## Fit models
 
-weights.models <- list()
+weights.models <- vector("list", length(models))
 for(i in seq_along(models)){
     weights.models[[i]] <- gevcdn.fit(x = x, y = y, n.trials = 1,
                                       n.hidden = models[[i]]$n.hidden,

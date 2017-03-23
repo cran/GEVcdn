@@ -12,8 +12,9 @@ function (n.bootstrap, x, y, iter.max = 1000, n.hidden = 2,
     if (!is.matrix(x)) stop("\"x\" must be a matrix")
     if (!is.matrix(y)) stop("\"y\" must be a matrix")
     boot.method <- match.arg(boot.method)
-    weights.bootstrap <- parms.bootstrap <- quantiles.bootstrap <- list()
-    location.bootstrap <- scale.bootstrap <- shape.bootstrap <- c()
+    weights.bootstrap <- parms.bootstrap <- quantiles.bootstrap <- vector("list", n.bootstrap)
+    location.bootstrap <- scale.bootstrap <- shape.bootstrap <-
+        matrix(NA, ncol=n.bootstrap, nrow=nrow(x))
     for (i in seq_len(n.bootstrap)){
         cat("** Trial", i, "\n")
         if (i==1){
@@ -55,10 +56,9 @@ function (n.bootstrap, x, y, iter.max = 1000, n.hidden = 2,
         quantiles.bootstrap[[i]] <- quantiles.prime
         weights.bootstrap[[i]] <- weights.prime
         parms.bootstrap[[i]] <- parms.prime
-        location.bootstrap <- cbind(location.bootstrap,
-                                    parms.prime[,"location"])
-        scale.bootstrap <- cbind(scale.bootstrap, parms.prime[,"scale"])
-        shape.bootstrap <- cbind(shape.bootstrap, parms.prime[,"shape"])
+        location.bootstrap[,i] <- parms.prime[,"location"]
+        scale.bootstrap[,i] <- parms.prime[,"scale"]
+        shape.bootstrap[,i] <- parms.prime[,"shape"]
     }
     list(weights.bootstrap = weights.bootstrap,
          parms.bootstrap = parms.bootstrap,
@@ -67,4 +67,3 @@ function (n.bootstrap, x, y, iter.max = 1000, n.hidden = 2,
          shape.bootstrap = shape.bootstrap,
          quantiles.bootstrap = quantiles.bootstrap)
 }
-

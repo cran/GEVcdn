@@ -155,20 +155,21 @@ parms.on <- lapply(weights.on, gevcdn.evaluate, x = x)
 
 ## 10th, 50th, and 90th percentiles
 
-q.10.on <- q.50.on <- q.90.on <- c()
+q.10.on <- q.50.on <- q.90.on <- matrix(NA, ncol=length(parms.on),
+                                        nrow=nrow(x))
 for(i in seq_along(parms.on)){
-    q.10.on <- cbind(q.10.on, qgev(p = 0.1,
-                     location = parms.on[[i]][,"location"],
-                     scale = parms.on[[i]][,"scale"],
-                     shape = parms.on[[i]][,"shape"]))
-    q.50.on <- cbind(q.50.on, qgev(p = 0.5,
-                     location = parms.on[[i]][,"location"],
-                     scale = parms.on[[i]][,"scale"],
-                     shape = parms.on[[i]][,"shape"]))
-    q.90.on <- cbind(q.90.on, qgev(p = 0.9,
-                     location = parms.on[[i]][,"location"],
-                     scale = parms.on[[i]][,"scale"],
-                     shape = parms.on[[i]][,"shape"]))
+    q.10.on[,i] <- qgev(p = 0.1,
+                        location = parms.on[[i]][,"location"],
+                        scale = parms.on[[i]][,"scale"],
+                        shape = parms.on[[i]][,"shape"])
+    q.50.on[,i] <- qgev(p = 0.5,
+                        location = parms.on[[i]][,"location"],
+                        scale = parms.on[[i]][,"scale"],
+                        shape = parms.on[[i]][,"shape"])
+    q.90.on[,i] <- qgev(p = 0.9,
+                        location = parms.on[[i]][,"location"],
+                        scale = parms.on[[i]][,"scale"],
+                        shape = parms.on[[i]][,"shape"])
 }
 
 ## Plot data and quantiles
