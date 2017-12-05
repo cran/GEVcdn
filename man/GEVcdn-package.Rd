@@ -33,11 +33,6 @@ the shape parameter is opposite to that used in hydrology and thus differs
 from Cannon (2010).
 }
 
-\author{
-Alex J. Cannon
-
-Maintainer: Alex J. Cannon <acannon@eos.ubc.ca>
-}
 \references{
 Cannon, A.J., 2010. A flexible nonlinear modelling framework for
 nonstationary generalized extreme value analysis in hydroclimatology.
