@@ -27,10 +27,10 @@ GEV parameters and specified quantiles can be estimated using
 \code{\link{gevcdn.bootstrap}}. All other functions are used internally and
 should not normally need to be called directly by the user.
 
-Note: the GEV distribution functions are provided by the
-\code{\link[VGAM:VGAM-package]{VGAM}} package. The convention for the sign of
-the shape parameter is opposite to that used in hydrology and thus differs
-from Cannon (2010).
+Note: the GEV distribution functions \code{dgev}, \code{pgev}, 
+\code{qgev}, and \code{rgev} are from the archived 
+\code{VGAM 1.0-6} package. The convention for the sign of the shape parameter
+is opposite to that used in hydrology and thus differs from Cannon (2010).
 }
 
 \references{
@@ -42,9 +42,9 @@ Cannon, A.J., 2011. GEVcdn: an R package for nonstationary extreme
 value analysis by generalized extreme value conditional density
 estimation network, Computers & Geosciences, 37: 1532-1533.
 DOI: 10.1016/j.cageo.2011.03.005
+
+Yee, T.W., 2018. VGAM: Vector Generalized Linear and Additive Models. 
+R package version 1.0-6.
 }
 
 \keyword{ package }
-\seealso{
-\code{\link[VGAM:VGAM-package]{VGAM}}
-}

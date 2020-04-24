@@ -13,4 +13,3 @@ function (x, weights, n.hidden)
     W2 <- matrix(W2, nrow = N21, ncol = N22)
     list(W1 = W1, W2 = W2)
 }
-
